@@ -1,81 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Features
-  Pricing
-  Resources
-
-  Login
-  Sign Up
-
-  More than just shorter links
-
-  Build your brand’s recognition and get detailed insights 
-  on how your links are performing.
-
-  Get Started
-  
-  Shorten a link here...
-
-  Shorten It!
-
-  Advanced Statistics
-
-  Track how your links are performing across the web with our 
-  advanced statistics dashboard.
-
-  Brand Recognition
-
-  Boost your brand recognition with each click. Generic links don’t 
-  mean a thing. Branded links help instil confidence in your content.
-
-  Detailed Records
-
-  Gain insights into who is clicking your links. Knowing when and where 
-  people engage with your content helps inform better decisions.
-
-  Fully Customizable
-
-  Improve brand awareness and content discoverability through customizable 
-  links, supercharging audience engagement.
-
-  Boost your links today
-
-  Get Started
-
-  Features
-
-  Link Shortening
-  Branded Links
-  Analytics
-
-  Resources
-
-  Blog
-  Developers
-  Support
-
-  Company
-
-  About
-  Our Team
-  Careers
-  Contact
+        <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+        </style>
+        <link href="style/style.css" rel="stylesheet" />
+        <script async src="script/script.js"></script>
+    </head>
+    <body>
+    
+        <header class="component">
+            <img class="logo" id="headerLogo" alt="logo" src="images/logo.svg"/>
+            <nav>
+                <input class="mobile" type="checkbox" id="toggle" />
+                <label class="mobile hamburger" for="toggle">
+                    <img alt="Menu" src="images/mobile-menu.svg" />
+                </label>
+                <div id="menuLists">
+                    <ul id="mainMenu">
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                    <span class="mobile hamburger" id="separator"></span>
+                    <ul id="accountMenu">
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#"><button id="signUp">Sign Up</button></a></li>
+                    </ul>
+                </div>
+        </nav>
+        </header>
+        
+        <main>
+            <div class="container" id="firstPart">
+                <div class="component">
+                    <div class="descText">
+                        <h1>More than just shorter links</h1>
+                        Build your brand’s recognition and get detailed insights on how your links are performing.
+                        <button id="getStarted">Get Started</button>
+                    </div>
+                    <div id="imageContainer">
+                        <img alt="Work" src="images/illustration-working.svg" />
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="shorten">
+                <div class="component">
+                    <input class="normalURL" id="url" type="url" placeholder="Shorten a link here..." required/>
+                    <span id="errorURL"></span>
+                    <input id="shortenButton" type="submit" id="linkSubmit" value="Shorten it!" onClick="addLink()"/>
+                </div>
+            </div>
+            <div class="container" id="links">
+                <div class="component">
+                    <ul id="linksList"></ul>
+                </div>
+            </div>
+            <div class="container" id="advanced">
+                <div class="descText">
+                    <h2>Advanced statistics</h2>
+                    <span id="advancedText">Track how your links are performing across the web with our advanced statistics dashboard.</span>
+                    <div class="component" id="cardList">
+                        <div class="card">
+                            <span class="icon"><img alt="Brand recognition" src="images/icon-brand-recognition.svg"/></span>
+                            <h3>Brand recognition</h3>
+                            <span class="cardText">Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.</span>
+                        </div>
+                        <div class="card">
+                            <span class="icon"><img alt="Detailed Records" src="images/icon-detailed-records.svg"/></span>
+                            <h3>Detailed Records</h3>
+                            <span class="cardText">Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</span>
+                        </div>
+                        <div class="card">
+                            <span class="icon"><img alt="Fully Customizable" src="images/icon-fully-customizable.svg"/></span>
+                            <h3>Fully Customizable</h3>
+                            <span class="cardText">Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container descText" id="build">
+                <h2>Boost your links today</h2>
+                <button>Get started</button>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="component">
+                <span id="footerLogo"><img class="logo" alt="logo" src="images/logo.svg" /></span>
+                <ul data-header="Features">
+                    <li><a href="#">Link Shortening</a></li>
+                    <li><a href="#">Branded Links</a></li>
+                    <li><a href="#">Analytics</a></li>
+                </ul>
+                <ul data-header="Resources">
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Developers</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+                <ul data-header="Company">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div id="social">
+                    <a href="#"><img alt="Facebook" src="images/icon-facebook.svg" /></a>
+                    <a href="#"><img alt="Twitter" src="images/icon-twitter.svg" /></a>
+                    <a href="#"><img alt="Pinterest" src="images/icon-pinterest.svg" /></a>
+                    <a href="#"><img alt="Instagram" src="images/icon-instagram.svg" /></a>
+                </div>
+            </div>
+        </footer>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
