@@ -47,6 +47,7 @@ h3 {
 a {
     color: hsl(0, 0%, 75%);
     text-decoration: none;
+    transition: 0.3s;
 }
 
 a:hover {
@@ -87,6 +88,7 @@ button, #shortenButton, .copyButton {
     font-style: "Poppins";
     font-size: 18px;
     letter-spacing: 1.5px;
+    transition: 0.3s;
 }
 
 button:hover, #shortenButton:hover, .copyButton:hover {
@@ -458,6 +460,7 @@ footer li:first-of-type {
     h1 {
         font-size: 40px;
         line-height: 50px;
+        justify-content: center;
     }
     
     h2 {
@@ -468,6 +471,10 @@ footer li:first-of-type {
         text-align: center;
         margin: auto;
         margin-top: 50px;
+    }
+    
+    a {
+        transition: 0s;
     }
     
     .component {
@@ -521,6 +528,7 @@ footer li:first-of-type {
         margin-left: 15px;
         margin-right: 15px;
         justify-content: center;
+        transition: 0s;
     }
     
     #menuLists a {
@@ -584,13 +592,13 @@ footer li:first-of-type {
     }
     
     #advanced .descText {
-        height: 1230px;
+        min-height: 1300px;
         justify-content: flex-start;
     }
     
     #cardList {
         width: 100%;
-        height: 1000px;
+        min-height: 1000px;
         background-size: 8px 100%;
     }
     
@@ -598,10 +606,12 @@ footer li:first-of-type {
         width: 100%;
         text-align: center;
         height: 270px;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .icon {
-        left: 120px;
+        left: calc(50% - 44px);
     }
     
     footer .component {
@@ -611,6 +621,7 @@ footer li:first-of-type {
     
     #footerLogo, footer li  {
         justify-content: center;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
